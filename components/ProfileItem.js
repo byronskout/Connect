@@ -19,7 +19,6 @@ const ProfileItem = ({
 				</Text>
 			</View>
 
-			<Text style={styles.name}>{name}</Text>
 
 	);
 };
