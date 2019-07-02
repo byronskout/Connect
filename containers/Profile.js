@@ -1,12 +1,5 @@
 import React from "react";
-
-import {
-	ScrollView,
-	View,
-	Text,
-	ImageBackground,
-	TouchableOpacity
-} from "react-native";
+import { ScrollView, View, Text, ImageBackground, TouchableOpacity } from "react-native";
 import ProfileItem from "../components/ProfileItem";
 import Icon from "../components/Icon";
 import Demo from "../assets/data/demo.js";

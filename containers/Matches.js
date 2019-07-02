@@ -1,32 +1,45 @@
 import React from "react";
-
-import {
-	ScrollView,
-	View,
-	Text,
-	TouchableOpacity,
-	ImageBackground,
-	FlatList
-} from "react-native";
+import styles from "../assets/styles";
+import { ScrollView, View, Text, TouchableOpacity, ImageBackground, FlatList } from "react-native";
+import CardItem from "../components/CardItem";
+import Icon from "../components/Icon";
+import Demo from "../assets/data/demo.js";
 
 const Matches = () => {
 	return (
-
-			<View >
+		<ImageBackground
+			source={require("../assets/images/bg.png")}
+			style={styles.bg}
+		>
+			<View>
 				<ScrollView>
 					<View>
 						<Text>Matches</Text>
 						<TouchableOpacity>
 							<Text>
+								<Icon name="optionsV" />
 							</Text>
 						</TouchableOpacity>
 					</View>
 
-
+					<FlatList
+						numColumns={2}
+						data={Demo}
+						keyExtractor={(item, index) => index.toString()}
+						renderItem={({ item }) => (
 							<TouchableOpacity>
+								<CardItem
+									image={item.image}
+									name={item.name}
+									status={item.status}
+									variant
+								/>
 							</TouchableOpacity>
+						)}
+					/>
 				</ScrollView>
 			</View>
+		</ImageBackground>
 	);
 };
 
