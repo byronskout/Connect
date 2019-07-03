@@ -1,28 +1,38 @@
 import React from "react";
-
-import {
-	ScrollView,
-	Text,
-	TouchableOpacity,
-	ImageBackground,
-	View,
-	FlatList
-} from "react-native";
+import { ScrollView, Text, TouchableOpacity, ImageBackground, View, FlatList } from "react-native";
+import Message from "../components/Message";
+import Icon from "../components/Icon";
+import Demo from "../assets/data/demo.js";
 
 const Messages = () => {
 	return (
-		<ImageBackground>
-			<View >
+		<ImageBackground
+			source={require("../assets/images/bg.png")}
+		>
+			<View>
 				<ScrollView>
 					<View>
 						<Text>Messages</Text>
 						<TouchableOpacity>
 							<Text>
+								<Icon name="optionsV" />
 							</Text>
 						</TouchableOpacity>
 					</View>
 
-					<FlatList/>
+					<FlatList
+						data={Demo}
+						keyExtractor={(item, index) => index.toString()}
+						renderItem={({ item }) => (
+							<TouchableOpacity>
+								<Message
+									image={item.image}
+									name={item.name}
+									lastMessage={item.message}
+								/>
+							</TouchableOpacity>
+						)}
+					/>
 				</ScrollView>
 			</View>
 		</ImageBackground>
