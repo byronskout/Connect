@@ -4,7 +4,6 @@ import CardStack, { Card } from "react-native-card-stack-swiper";
 import City from "../components/City";
 import Filters from "../components/Filters";
 import CardItem from "../components/CardItem";
-import styles from "../assets/styles";
 import Demo from "../assets/data/demo.js";
 
 const Home = () => {

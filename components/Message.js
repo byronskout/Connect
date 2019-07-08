@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../assets/styles";
 
 import { Text, View, Image } from "react-native";
 
