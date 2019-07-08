@@ -7,6 +7,7 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"mem": "^5.1.1",
 		"react": "16.6.3",
 		"react-native": "^0.59.9",
 		"react-native-card-stack-swiper": "^1.1.0",
