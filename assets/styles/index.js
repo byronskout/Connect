@@ -31,5 +31,16 @@ export default StyleSheet.create({
 		shadowRadius: 10,
 		shadowColor: BLACK,
 		shadowOffset: { height: 0, width: 0 }
+	},
+	matchesCardItem: {
+		marginTop: -35,
+		backgroundColor: PRIMARY_COLOR,
+		paddingVertical: 7,
+		paddingHorizontal: 20,
+		borderRadius: 20
+	},
+	matchesTextCardItem: {
+		fontFamily: ICON_FONT,
+		color: WHITE
 	}
 });

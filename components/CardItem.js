@@ -36,14 +36,14 @@ const CardItem = ({
 	];
 
 	return (
-		<View>
+		<View style={styles.containerCardItem}>
 			{/* IMAGE */}
 			<Image source={image}  />
 
 			{/* MATCHES */}
 			{matches && (
-				<View >
-					<Text >
+				<View style={styles.matchesCardItem}>
+					<Text style={styles.matchesTextCardItem}>
 						<Icon name="heart" /> {matches}% Match!
 					</Text>
 				</View>
