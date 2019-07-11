@@ -67,7 +67,7 @@ const CardItem = ({
 
 			{/* ACTIONS */}
 			{actions && (
-				<View >
+				<View style={styles.actionsCardItem}>
 				<TouchableOpacity style={styles.miniButton}>
 				<Text style={styles.star}>
 							<Icon name="star" />
