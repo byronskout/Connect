@@ -54,41 +54,45 @@ const CardItem = ({
 
 			{/* DESCRIPTION */}
 			{description && (
-				<Text >{description}</Text>
+				<Text style={styles.descriptionCardItem}>{description}</Text>
 			)}
 
 			{/* STATUS */}
 			{status && (
-				<View >
-					<View style={status === "Online" } />
-					<Text>{status}</Text>
+				<View style={styles.status}>
+					<View style={status === "Online" ? styles.online : styles.offline} />
+					<Text style={styles.statusText}>{status}</Text>
 				</View>
 			)}
 
 			{/* ACTIONS */}
 			{actions && (
 				<View >
-					<TouchableOpacity >
-						<Text>
+				<TouchableOpacity style={styles.miniButton}>
+				<Text style={styles.star}>
 							<Icon name="star" />
 						</Text>
 					</TouchableOpacity>
 
-					<TouchableOpacity  onPress={() => onPressLeft()}>
-						<Text>
+					<TouchableOpacity style={styles.button} onPress={() => onPressLeft()}>
+					<Text style={styles.like}>
 							<Icon name="like" />
 						</Text>
 					</TouchableOpacity>
 
 					<TouchableOpacity
-						onPress={() => onPressRight()}
+					style={styles.button}
+					onPress={() => onPressRight()}
 					>
+					<Text style={styles.dislike}>
 							<Icon name="dislike" />
 						</Text>
 					</TouchableOpacity>
 
-					<TouchableOpacity >
-
+					<TouchableOpacity style={styles.miniButton}>
+						<Text style={styles.flash}>
+							<Icon name="flash" />
+						</Text>
 					</TouchableOpacity>
 				</View>
 			)}
