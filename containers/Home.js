@@ -5,11 +5,13 @@ import City from "../components/City";
 import Filters from "../components/Filters";
 import CardItem from "../components/CardItem";
 import Demo from "../assets/data/demo.js";
+import styles from "../assets/styles";
 
 const Home = () => {
 	return (
 		<ImageBackground
 			source={require("../assets/images/bg.png")}
+			style={styles.bg}
 		>
 			<View>
 				<View>

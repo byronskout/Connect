@@ -4,59 +4,69 @@ import { Text, View } from "react-native";
 import Icon from "./Icon";
 import styles from "../assets/styles";
 
-const ProfileItem = ({
-	age,
-	info1,
-	info2,
-	info3,
-	info4,
-	location,
-	matches,
-	name
-}) => {
+const Profile = () => {
+	const {
+		age,
+		image,
+		info1,
+		info2,
+		info3,
+		info4,
+		location,
+		match,
+		name
+	} = Demo[7];
+
 	return (
-		<View>
-			<View>
-				<Text>
-					<Icon name="heart" /> {matches}% Match!
-				</Text>
-			</View>
+		<ImageBackground
+			source={require("../assets/images/bg.png")}
+			style={styles.bg}
+		>
+			<ScrollView style={styles.containerProfile}>
+				<ImageBackground source={image} style={styles.photo}>
+					<View style={styles.top}>
+						<TouchableOpacity>
+							<Text style={styles.topIconLeft}>
+								<Icon name="chevronLeft" />
+							</Text>
+						</TouchableOpacity>
 
-			<Text>{name}</Text>
+						<TouchableOpacity>
+							<Text style={styles.topIconRight}>
+								<Icon name="optionsV" />
+							</Text>
+						</TouchableOpacity>
+					</View>
+				</ImageBackground>
 
-			<Text>
-				{age} - {location}
-			</Text>
+				<ProfileItem
+					matches={match}
+					name={name}
+					age={age}
+					location={location}
+					info1={info1}
+					info2={info2}
+					info3={info3}
+					info4={info4}
+				/>
 
-			<View>
-				<Text>
-					<Icon name="user" />
-				</Text>
-				<Text>{info1}</Text>
-			</View>
+				<View style={styles.actionsProfile}>
+					<TouchableOpacity style={styles.circledButton}>
+						<Text style={styles.iconButton}>
+							<Icon name="optionsH" />
+						</Text>
+					</TouchableOpacity>
 
-			<View>
-				<Text>
-					<Icon name="circle" />
-				</Text>
-				<Text>{info2}</Text>
-			</View>
-
-			<View>
-				<Text>
-					<Icon name="hashtag" />
-				</Text>
-				<Text>{info3}</Text>
-			</View>
-
-			<View>
-				<Text>
-					<Icon name="calendar" />
-				</Text>
-				<Text>{info4}</Text>
-			</View>
-		</View>
+					<TouchableOpacity style={styles.roundedButton}>
+						<Text style={styles.iconButton}>
+							<Icon name="chat" />
+						</Text>
+						<Text style={styles.textButton}>Start chatting</Text>
+					</TouchableOpacity>
+				</View>
+			</ScrollView>
+		</ImageBackground>
 	);
 };
 
-export default ProfileItem;
+export default Profile;

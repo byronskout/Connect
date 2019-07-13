@@ -3,6 +3,7 @@ import { ScrollView, Text, TouchableOpacity, ImageBackground, View, FlatList } f
 import Message from "../components/Message";
 import Icon from "../components/Icon";
 import Demo from "../assets/data/demo.js";
+import styles from "../assets/styles";
 
 const Messages = () => {
 	return (

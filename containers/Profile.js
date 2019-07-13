@@ -3,6 +3,7 @@ import { ScrollView, View, Text, ImageBackground, TouchableOpacity } from "react
 import ProfileItem from "../components/ProfileItem";
 import Icon from "../components/Icon";
 import Demo from "../assets/data/demo.js";
+import styles from "../assets/styles";
 
 const Profile = () => {
 	const {
