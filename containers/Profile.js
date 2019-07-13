@@ -21,18 +21,19 @@ const Profile = () => {
 	return (
 		<ImageBackground
 			source={require("../assets/images/bg.png")}
+			style={styles.bg}
 		>
 			<ScrollView>
 				<ImageBackground source={image}>
 					<View>
 						<TouchableOpacity>
-							<Text>
+							<Text style={styles.topIconLeft}>
 								<Icon name="chevronLeft" />
 							</Text>
 						</TouchableOpacity>
 
 						<TouchableOpacity>
-							<Text>
+							<Text style={styles.topIconRight}>
 								<Icon name="optionsV" />
 							</Text>
 						</TouchableOpacity>
@@ -51,13 +52,13 @@ const Profile = () => {
 				/>
 
 				<View>
-					<TouchableOpacity>
+					<TouchableOpacity style={styles.circledButton}>
 						<Text>
 							<Icon name="optionsH" />
 						</Text>
 					</TouchableOpacity>
 
-					<TouchableOpacity>
+					<TouchableOpacity style={styles.roundedButton}>
 						<Text>
 							<Icon name="chat" />
 						</Text>
