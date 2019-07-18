@@ -23,9 +23,9 @@ const Profile = () => {
 			source={require("../assets/images/bg.png")}
 			style={styles.bg}
 		>
-			<ScrollView>
-				<ImageBackground source={image}>
-					<View>
+			<ScrollView style={styles.containerProfile}>
+				<ImageBackground source={image} style={styles.photo}>
+					<View style={styles.top}>
 						<TouchableOpacity>
 							<Text style={styles.topIconLeft}>
 								<Icon name="chevronLeft" />
@@ -53,16 +53,16 @@ const Profile = () => {
 
 				<View>
 					<TouchableOpacity style={styles.circledButton}>
-						<Text>
+						<Text style={styles.iconButton}>
 							<Icon name="optionsH" />
 						</Text>
 					</TouchableOpacity>
 
 					<TouchableOpacity style={styles.roundedButton}>
-						<Text>
+						<Text style={styles.iconButton}>
 							<Icon name="chat" />
 						</Text>
-						<Text>Start chatting</Text>
+						<Text style={styles.textButton}>Start chatting</Text>
 					</TouchableOpacity>
 				</View>
 			</ScrollView>
