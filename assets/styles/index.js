@@ -236,5 +236,24 @@ roundedButton: {
   borderRadius: 25,
   backgroundColor: SECONDARY_COLOR,
   paddingHorizontal: 20
+},
+containerMatches: {
+  justifyContent: "space-between",
+  flex: 1,
+  paddingHorizontal: 10
+},
+top: {
+  paddingTop: 50,
+  marginHorizontal: 10,
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center"
+},
+title: { paddingBottom: 10, fontSize: 22, color: DARK_GRAY },
+icon: {
+  fontFamily: ICON_FONT,
+  fontSize: 20,
+  color: DARK_GRAY,
+  paddingRight: 10
 }
 });

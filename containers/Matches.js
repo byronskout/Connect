@@ -11,12 +11,12 @@ const Matches = () => {
 			source={require("../assets/images/bg.png")}
 			style={styles.bg}
 		>
-			<View>
+			<View style={styles.containerMatches}>
 				<ScrollView>
-					<View>
-						<Text>Matches</Text>
+					<View style={styles.top}>
+						<Text style={styles.title}>Matches</Text>
 						<TouchableOpacity>
-							<Text>
+							<Text style={styles.icon}>
 								<Icon name="optionsV" />
 							</Text>
 						</TouchableOpacity>
