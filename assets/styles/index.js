@@ -255,5 +255,10 @@ icon: {
   fontSize: 20,
   color: DARK_GRAY,
   paddingRight: 10
+},
+containerMessages: {
+  justifyContent: "space-between",
+  flex: 1,
+  paddingHorizontal: 10
 }
 });

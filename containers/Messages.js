@@ -11,12 +11,12 @@ const Messages = () => {
 			source={require("../assets/images/bg.png")}
 			style={styles.bg}
 		>
-			<View>
+			<View style={styles.containerMessages}>
 				<ScrollView>
-					<View>
-						<Text>Messages</Text>
+					<View style={styles.top}>
+						<Text style={styles.title}>Messages</Text>
 						<TouchableOpacity>
-							<Text>
+							<Text style={styles.icon}>
 								<Icon name="optionsV" />
 							</Text>
 						</TouchableOpacity>
