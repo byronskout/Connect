@@ -13,8 +13,8 @@ const Home = () => {
 			source={require("../assets/images/bg.png")}
 			style={styles.bg}
 		>
-			<View>
-				<View>
+			<View style={styles.containerHome}>
+				<View style={styles.top}>
 					<City />
 					<Filters />
 				</View>
